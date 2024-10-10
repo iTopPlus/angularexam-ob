@@ -1,0 +1,46 @@
+<div class="webpage display-flex align-items-center justify-contents-center">
+    <div class="box-content-responsive border box-shadow-min text-align-center position-relative" style="padding: 35px 25px;">
+        <div class="position-absolute">
+            <img src="assets/icons/leftarrow.png" style="width: 7.5px; height: auto; cursor: pointer;" (click)="turnBack()">
+        </div>
+        <h2 class="font-dark" style="margin-top: 30px;">Sign In</h2>
+        <div style="margin-top: 25px;">
+            <input type="email" class="input" style="width: 100%;" placeholder="enter your email">
+        </div>
+        <div style="margin-top: 15px;" class="position-relative">
+            <input type="password" class="input" style="width: 100%;" placeholder="enter your password">
+            <div class="position-absolute" style="top: 6px; right: 6px;">
+                <i class="far fa-eye font-grey" style="font-size: 12px;"></i>
+            </div>
+        </div>
+        <div style="margin-top: 15px;">
+            <button type="button" class="button background-green font-white" style="width: 100%;" (click)="signInCommit()">Sign In</button>
+        </div>
+        <div class="display-flex justify-contents-between align-items-center" style="margin-top: 15px;">
+            <div style="width: 40%;"><hr></div>
+            <p class="font-grey">Or</p>
+            <div style="width: 40%;"><hr></div>
+        </div>
+        <div style="margin-top: 15px;" class="position-relative">
+            <button type="button" class="button background-light border" style="width: 100%; font-size: 14px;">Sign up with Google</button>
+            <div class="position-absolute" style="top: 10px; left: 10px;">
+                <img src="assets/icons/google.png" style="width: 15px; height: auto;">
+            </div>
+        </div>
+        <div style="margin-top: 15px;" class="position-relative">
+            <button type="button" class="button background-light border" style="width: 100%; font-size: 14px;">Sign up with Meta</button>
+            <div class="position-absolute" style="top: 10px; left: 10px;">
+                <img src="assets/icons/meta.png" style="width: 15px; height: auto;">
+            </div>
+        </div>
+        <div class="text-align-center" style="margin-top: 15px;">
+            <p class="font-dark">Forgot your password?</p>
+        </div>
+        <div class="text-align-center" style="margin-top: 15px;">
+            <p class="font-dark">Already have an account? <a class="font-green pointer">Sign In</a></p>
+        </div>
+    </div>
+    <div class="bottom-content">
+        <p class="font-grey">BuddyBills <a class="font-black pointer">Terms of Services</a> and <a class="font-black pointer">Privacy Policy</a></p>
+    </div>
+</div>

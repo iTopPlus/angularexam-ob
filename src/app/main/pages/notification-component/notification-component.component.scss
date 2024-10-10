@@ -1,0 +1,28 @@
+@import '../../../../scss/base.scss';
+
+.notification-list{
+    height: 100%;
+    overflow-y: auto;
+
+    .item{
+        margin: 2.5px 0;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        border-radius: 5px;
+        
+        &.waitforread{
+            background-color: #f0fbfa;
+        }
+
+        .img {
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+    }
+}

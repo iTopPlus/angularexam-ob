@@ -1,0 +1,106 @@
+@import "../../../scss/base.scss";
+
+.sidebar {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: white;
+    @extend .border;
+    border-radius: 0 !important;
+
+    .brands {
+        width: 100%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-group{
+        width: 100%;
+        padding: 0 5px;
+
+        .menu-items{
+            width: 100%;
+            height: 35px;
+            padding: 0 10px;
+            font-size: 14px;
+            color: $font-dark;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 5px;
+            gap: 10px;
+
+            &.active {
+                background-color: $background-green;
+                color: $font-white;
+            }
+        }
+    }
+
+    
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    background-color: transparent;
+    top: 0;
+    left: 200px;
+    height: 50px;
+    width: calc(100% - 200px);
+
+    .right-list{
+        margin-left: auto;
+        margin-right: 15px;
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .menu-items{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @extend .border;
+            border-radius: 100% !important;
+            background-color: white;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            font-size: 14px;
+            color: $font-grey;
+        }
+    }
+}
+
+.content {
+    position: relative;
+    margin-left: 200px;
+    margin-top: 50px;
+    padding: 25px;
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    .left-content {
+        margin: 60px 50px 0 auto;
+        padding: 20px;
+        width: 300px;
+        height: calc(100% - 100px);
+        background-color: white;
+        @extend .border;
+    }
+}

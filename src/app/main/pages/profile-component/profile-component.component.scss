@@ -1,0 +1,13 @@
+@import '../../../../scss/base.scss';
+
+.menu-box {
+    display: block;
+
+    .menu-item {
+        border-top: 1px solid #6f8190;
+        display: flex;
+        align-items: center;
+        color: #6f8190;
+        height: 50px;
+    }
+}

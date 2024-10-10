@@ -1,0 +1,159 @@
+<div *ngIf="!alreadyInGroup">
+    <div class="container">
+        <div class="display-flex align-items-center justify-contents-center text-align-center" style="min-height: 500px;">
+            <div>
+                <div class="display-flex align-items-center justify-contents-center" style="width: 100%;">
+                    <img src="assets/icons/nogroup.png" style="width: 200px; height: auto;">
+                </div>
+                <h3>You do not have any group yet.</h3>
+                <p>Create a new group to easily manage and</p>
+                <p>collect payments from members.</p>
+                <div class="input-box">
+                    <label for="">&nbsp;</label>
+                    <button type="button" class="button background-dark font-white" (click)="modalActive()"><i class="fa fa-user-group"></i> Start a new group</button>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+</div>
+
+<div *ngIf="alreadyInGroup">
+    <div class="chat-box">
+        <div class="group-list">
+            <div class="top-part">
+                <div class="input-box position-relative">
+                    <input type="text" class="input" style="padding: .25rem 1.5rem; border-radius: 1rem;" placeholder="Search..">
+                    <div style="position: absolute; top: 10px; left: 10px; font-size: 12px;">
+                        <i class="fas fa-search "></i>
+                    </div>
+                </div>
+            </div>
+            <div class="show-group">
+                <div class="group-items">
+                    <img src="assets/groups/group1.jpg" alt="" class="img">
+                    <div class="detail">
+                        <b>สั่งอาหาร Office</b>
+                        <p>Name: messages example</p>
+                        <p style="color: #f75961;">You owe: ฿50.00</p>
+                    </div>
+                    <div class="timer">14:00</div>
+                </div>
+                <div class="group-items">
+                    <img src="assets/groups/group2.jpg" alt="" class="img">
+                    <div class="detail">
+                        <b>Group name</b>
+                        <p>Name: messages example</p>
+                    </div>
+                    <div class="timer">Yesterday</div>
+                </div>
+            </div>
+        </div>
+        <div class="group-chat">
+            <div class="top-part">
+                <div class="group-name">สั่งอาหาร Office</div>
+                <div class="group-history"><i class="fas fa-history"></i></div>
+            </div>
+            <div class="chat-part">
+                <div class="chat-display">
+                    <div class="chat-log-me">
+                        <div class="chat-background">
+                            test
+                        </div>
+                    </div>
+                </div>
+                <div class="tool display-flex justify-contents-center">
+                    <div  style="width: 80%; background-color: white; height: 35px; border-radius: 1rem; display: flex; gap: 10px; align-items: center; padding: 0 10px;" class="box-shadow-min">
+                        <i class="fas fa-receipt"></i>
+                        <i class="fas fa-camera"></i>
+                        <i class="fas fa-image"></i>
+                        <i class="fa fa-paper-plane" style="margin-left: auto;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-box display-flex align-items-center justify-contents-center display-none">
+    <div class="center-content">
+        <div class="display-flex align-items-center justify-contents-between">
+            <p>Create a new group</p>
+            <i class="fa fa-times pointer" style="color: lightgray;" (click)="modalActive()"></i>
+        </div>
+        <div class="display-flex align-items-center justify-contents-center" >
+            <div style="padding-top: 15px;">
+                <label for="image">
+                    <div style="width: 100px; height: 100px; border-radius: 100%;" class="background-green font-white display-flex align-items-center justify-contents-center">
+                        <img *ngIf="!img" src="assets/icons/upload2.png" style="width: 40px; height: auto;">
+                        <img *ngIf="img" [src]="img" style="width: 100%; height: 100%; object-fit: cover; border-radius: 100%;">
+                    </div>
+                </label>
+            </div>
+        </div>
+        <input type="file" name="" id="image" (change)="imageAdd($event)" hidden>
+        <div class="input-box">
+            <label for="">Group name</label>
+            <input type="text" name="" id="" class="input" placeholder="Enter your group name">
+        </div>
+        <div class="input-box position-relative">
+            <label for="">Invite friends to Group</label>
+            <input type="text" name="" id="" class="input" style="border-radius: 1rem;" placeholder="Search for friend">
+            <div class="position-absolute" style="top: 30px; right: 15px;">
+                <i class="fa fa-search" style="font-size: 14px;"></i>
+            </div>
+        </div>
+        <p class="font-green" style="font-size: 14px; margin-top: 5px;">
+            Friends 25
+        </p>
+        <div style="height: 150px; overflow-y: auto;">
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="invite" (click)="buttonActive($event)"> invite</button>
+            </div>
+        </div>
+        <div class="bottom-part">
+            <button type="button" class="button background-white border font-green" style="border: 1px solid #59baad !important; padding: .25rem .50rem;" (click)="modalActive()">Cancel</button>
+            <button type="button" class="button background-green border font-white" style="padding: .25rem .50rem;">Create group</button>
+        </div>
+    </div>
+</div>

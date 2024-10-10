@@ -1,0 +1,95 @@
+<div *ngIf="page == 'empty'" style="height: 100%;">
+    <p>Friends</p>
+    <div class="display-flex align-items-center justify-contents-center" style="height: 100%; width: 100%;">
+        <div>
+            <div class="display-flex align-items-center justify-contents-center" style="width: 100%;">
+                <img src="assets/icons/nofriends.png" style="width: 100px; height: auto;">
+            </div>
+            <div class="text-align-center">
+                <h3>You do not have any friends yet.</h3>
+                <p style="font-size: 12px;">Start adding friends so you can add them to group.</p>
+                <div class="input-box">
+                    <label for="">&nbsp;</label>
+                    <button type="button" class="button background-dark font-white" (click)="changeTo('addfriend')"><i class="fa fa-user-plus"></i> Add friend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="page == 'addfriend'" style="height: 100%;">
+    <p>Add friends</p>
+    <div class="search-mode-box">
+        <div class="child">
+            <div class="option" [ngClass]="{'active': mode == 'username'}" (click)="changeMode('username')">&#64; Username</div>
+        </div>
+        <div class="child">
+            <div class="option" [ngClass]="{'active': mode == 'phonenumber'}" (click)="changeMode('phonenumber')"><i class="fas fa-phone"></i> Phone number</div>
+        </div>
+    </div>
+    <div class="input-box position-relative" style="margin-top: 5px;">
+        <input [(ngModel)]="search" type="text" class="input" style="border-radius: 1rem; padding: .35rem 1rem; padding-left: 2rem;"  [placeholder]="mode == 'username' ? 'Enter username' : 'Search for phone number'">
+        <div class="position-absolute" style="top: 8px; left: 16px;">
+            <i class="fa fa-search" style="font-size: 12px;"></i>
+        </div>
+    </div>
+    <div *ngIf="search.length > 0">
+        <div style="margin-top: 15px;">
+            <p style="font-size: 12px;">1 user found</p>
+            <div class="list">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/users/user.jpg" class="img">
+                    <p>Michael</p>
+                </div>
+                <button type="button" class="add" (click)="changeTo('showfriend')"> + Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="page == 'showfriend'">
+    <div class="display-flex align-items-center justify-contents-between">
+        <p>Friends 25</p>
+        <div style="width: 30px; height: 30px; line-height: 30px; border-radius: 100%; background-color: #474a51; text-align: center; color: white; font-size: 12px;" (click)="changeTo('addfriend')">
+            <i class="fa fa-user-plus"></i>
+        </div>
+    </div>
+    <div class="input-box position-relative" style="margin-top: 5px;">
+        <input type="text" class="input" style="border-radius: 1rem; padding: .35rem 1rem; padding-left: 2rem;" placeholder="Search for friends">
+        <div class="position-absolute" style="top: 8px; left: 16px;">
+            <i class="fa fa-search" style="font-size: 12px;"></i>
+        </div>
+    </div>
+    <div class="list">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/users/user.jpg" class="img">
+            <p>Michael</p>
+        </div>
+    </div>
+    <div class="list">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/users/user.jpg" class="img">
+            <p>Michael</p>
+        </div>
+    </div>
+    <div class="list">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/users/user.jpg" class="img">
+            <p>Michael</p>
+        </div>
+    </div>
+    <div class="list">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/users/user.jpg" class="img">
+            <p>Michael</p>
+        </div>
+    </div>
+    <div class="list">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/users/user.jpg" class="img">
+            <p>Michael</p>
+        </div>
+    </div>
+</div>
+<!-- <p>Add friends</p>
+<p>Friends 25</p> -->

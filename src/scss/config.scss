@@ -1,0 +1,32 @@
+// ตั้งจุดเปลี่ยน responsive
+$breakpoint-xs: 0px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// ตั้งสีธีมเว็ป
+$background-white: #ffffff;
+$background-light: #fcfcfc;
+$background-green: #59baad;
+$background-dark: #474a51;
+$background-light-grey: #c4cdd4;
+
+// สีอักขระ
+$font-black: #000000;
+$font-dark: #2f3136;
+$font-grey: #5a6e7c;
+$font-white: #ffffff;
+$font-green: #59baad;
+
+// default
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f9fafb;
+}
